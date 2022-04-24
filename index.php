@@ -159,4 +159,6 @@ class PicoWiki
 }
 
 $PicoWiki = new PicoWiki($config);
-$PicoWiki->run(@$_GET['url']);
+//$PicoWiki->run(@$_GET['url']);
+include __DIR__ . "/backend/vurl.php";
+$PicoWiki->run(@$vi);
