@@ -1,9 +1,11 @@
 {
   "functions": {
-    "*.php": {"runtime": "vercel-php@0.5.0"},
-    "*.css": {"runtime": "@vercel/static"},
-    "*.png": {"runtime": "@vercel/static"},
-    "*.jpg": {"runtime": "@vercel/static"},
-    "*.gif": {"runtime": "@vercel/static"}
-  }
+    "*.php": {"runtime": "vercel-php@0.5.0"}
+  },
+  "builds": [
+    { "src": "*.css", "use": "@vercel/static" },
+    { "src": "*.png", "use": "@vercel/static" },
+    { "src": "*.jpg", "use": "@vercel/static" },
+    { "src": "*.gif", "use": "@vercel/static" }
+  ]
 }
