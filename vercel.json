@@ -1,12 +1,15 @@
 {
-  "functions": {
-    "*.php": {"runtime": "vercel-php@0.5.0"}
-  },
   "builds": [
-    { "src": "*.css", "use": "@vercel/static" },
-    { "src": "*.png", "use": "@vercel/static" },
-    { "src": "*.jpg", "use": "@vercel/static" },
-    { "src": "*.gif", "use": "@vercel/static" }
+    { "src": "*.php", "use": "vercel-php@0.5.2" },
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.htm", "use": "@vercel/static" },
+    { "src": "*.js", "use": "@vercel/static" },
+    { "src": "backend/*.php", "use": "vercel-php@0.5.2" },
+    { "src": "backend/plugins/*.php", "use": "vercel-php@0.5.2" },
+    { "src": "backend/plugins/PluginMarkDown/*.php", "use": "vercel-php@0.5.2" },
+    { "src": "static/*.png", "use": "@vercel/static" },
+    { "src": "static/*.jpg", "use": "@vercel/static" },
+    { "src": "static/*.css", "use": "@vercel/static" }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.php" }
